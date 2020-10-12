@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MMSDataSet1" targetNamespace="http://tempuri.org/MMSDataSet1.xsd" xmlns:mstns="http://tempuri.org/MMSDataSet1.xsd" xmlns="http://tempuri.org/MMSDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MMSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MMSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.meters.Properties.Settings.GlobalReference.Default.MMSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spr_tp_ierarhiyTableAdapter" GeneratorDataComponentClassName="spr_tp_ierarhiyTableAdapter" Name="spr_tp_ierarhiy" UserDataComponentName="spr_tp_ierarhiyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MMSConnectionString (Settings)" DbObjectName="MMS.dbo.spr_tp_ierarhiy" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, name_obor, name_vl, name_ps, id_zavis FROM dbo.spr_tp_ierarhiy</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="name_obor" DataSetColumn="name_obor" />
+              <Mapping SourceColumn="name_vl" DataSetColumn="name_vl" />
+              <Mapping SourceColumn="name_ps" DataSetColumn="name_ps" />
+              <Mapping SourceColumn="id_zavis" DataSetColumn="id_zavis" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spr_Reg_Billing_for_reportTableAdapter" GeneratorDataComponentClassName="spr_Reg_Billing_for_reportTableAdapter" Name="spr_Reg_Billing_for_report" UserDataComponentName="spr_Reg_Billing_for_reportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MMSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill_prom" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill_prom" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill_prom">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        spr_RegionBilling.cspot, spr_RegionBilling.cspot2, spr_RegionBilling.address1, spr_RegionBilling.address2, spr_RegionBilling.ccounter, CONVERT(int, 
+                         spr_RegionBilling.cstation) AS cstation, spr_RegionBilling.nregion, spr_RegionBilling.customer_type, spr_RegionBilling.MCB_CT, spr_RegionBilling.ccounter_type, 
+                         spr_RegionBilling.transformer_ratio, spr_RegionBilling.PM, spr_RegionBilling.id, spr_RegionBilling.cconsumer10, spr_RegionBilling.cabonent10, 
+                         spr_RegionBilling.nfeader, spr_RegionBilling.feader, spr_RegionBilling.nsubstation, spr_RegionBilling.substation, spr_Slujba.name_slujba
+FROM            spr_RegionBilling INNER JOIN
+                         spr_Slujba ON spr_RegionBilling.nregion = spr_Slujba.id
+WHERE        (spr_RegionBilling.nregion = @nregion) AND (spr_RegionBilling.cstation = @cstation) AND (spr_RegionBilling.customer_type = 0)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="nregion" ColumnName="nregion" DataSourceName="MMS.dbo.spr_RegionBilling" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@nregion" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="nregion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cstation" ColumnName="cstation" DataSourceName="MMS.dbo.spr_RegionBilling" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@cstation" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="cstation" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cspot" DataSetColumn="cspot" />
+              <Mapping SourceColumn="cspot2" DataSetColumn="cspot2" />
+              <Mapping SourceColumn="address1" DataSetColumn="address1" />
+              <Mapping SourceColumn="address2" DataSetColumn="address2" />
+              <Mapping SourceColumn="ccounter" DataSetColumn="ccounter" />
+              <Mapping SourceColumn="cstation" DataSetColumn="cstation" />
+              <Mapping SourceColumn="nregion" DataSetColumn="nregion" />
+              <Mapping SourceColumn="customer_type" DataSetColumn="customer_type" />
+              <Mapping SourceColumn="MCB_CT" DataSetColumn="MCB_CT" />
+              <Mapping SourceColumn="ccounter_type" DataSetColumn="ccounter_type" />
+              <Mapping SourceColumn="transformer_ratio" DataSetColumn="transformer_ratio" />
+              <Mapping SourceColumn="PM" DataSetColumn="PM" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="cconsumer10" DataSetColumn="cconsumer10" />
+              <Mapping SourceColumn="cabonent10" DataSetColumn="cabonent10" />
+              <Mapping SourceColumn="nfeader" DataSetColumn="nfeader" />
+              <Mapping SourceColumn="feader" DataSetColumn="feader" />
+              <Mapping SourceColumn="substation" DataSetColumn="substation" />
+              <Mapping SourceColumn="name_slujba" DataSetColumn="name_slujba" />
+              <Mapping SourceColumn="nsubstation" DataSetColumn="nsubstation1" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="MMSConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill_byt" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="Fill_byt" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Fill_byt">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        spr_RegionBilling.cspot, spr_RegionBilling.cspot2, spr_RegionBilling.address1, spr_RegionBilling.address2, spr_RegionBilling.ccounter, CONVERT(int, 
+                         spr_RegionBilling.cstation) AS cstation, spr_RegionBilling.nregion, spr_RegionBilling.customer_type, spr_RegionBilling.MCB_CT, spr_RegionBilling.ccounter_type, 
+                         spr_RegionBilling.transformer_ratio, spr_RegionBilling.PM, spr_RegionBilling.id, spr_RegionBilling.cconsumer10, spr_RegionBilling.cabonent10, 
+                         spr_RegionBilling.nfeader, spr_RegionBilling.feader, spr_RegionBilling.nsubstation, spr_RegionBilling.substation, spr_Slujba.name_slujba
+FROM            spr_RegionBilling INNER JOIN
+                         spr_Slujba ON spr_RegionBilling.nregion = spr_Slujba.id
+WHERE        (spr_RegionBilling.nregion = @nregion) AND (spr_RegionBilling.cstation = @cstation)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="nregion" ColumnName="nregion" DataSourceName="MMS.dbo.spr_RegionBilling" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@nregion" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="nregion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cstation" ColumnName="cstation" DataSourceName="MMS.dbo.spr_RegionBilling" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@cstation" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="cstation" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="spr_resTableAdapter" GeneratorDataComponentClassName="spr_resTableAdapter" Name="spr_res" UserDataComponentName="spr_resTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MMSConnectionString (Settings)" DbObjectName="MMS.dbo.spr_res" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [spr_res] ([slujbi], [id_old], [id_zavis], [id], [vid], [code], [id_res]) VALUES (@slujbi, @id_old, @id_zavis, @id, @vid, @code, @id_res)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@slujbi" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="slujbi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_old" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_old" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_zavis" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_zavis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@vid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="vid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@code" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_res" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_res" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        slujbi, id_old, id_zavis, id, vid, code, id_res
+FROM            spr_res</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="slujbi" DataSetColumn="slujbi" />
+              <Mapping SourceColumn="id_old" DataSetColumn="id_old" />
+              <Mapping SourceColumn="id_zavis" DataSetColumn="id_zavis" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="vid" DataSetColumn="vid" />
+              <Mapping SourceColumn="code" DataSetColumn="code" />
+              <Mapping SourceColumn="id_res" DataSetColumn="id_res" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MMSDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MMSDataSet1" msprop:Generator_UserDSName="MMSDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="spr_tp_ierarhiy" msprop:Generator_TableClassName="spr_tp_ierarhiyDataTable" msprop:Generator_TableVarName="tablespr_tp_ierarhiy" msprop:Generator_TablePropName="spr_tp_ierarhiy" msprop:Generator_RowDeletingName="spr_tp_ierarhiyRowDeleting" msprop:Generator_RowChangingName="spr_tp_ierarhiyRowChanging" msprop:Generator_RowEvHandlerName="spr_tp_ierarhiyRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_tp_ierarhiyRowDeleted" msprop:Generator_UserTableName="spr_tp_ierarhiy" msprop:Generator_RowChangedName="spr_tp_ierarhiyRowChanged" msprop:Generator_RowEvArgName="spr_tp_ierarhiyRowChangeEvent" msprop:Generator_RowClassName="spr_tp_ierarhiyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="52" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_obor" msprop:Generator_ColumnVarNameInTable="columnname_obor" msprop:Generator_ColumnPropNameInRow="name_obor" msprop:Generator_ColumnPropNameInTable="name_oborColumn" msprop:Generator_UserColumnName="name_obor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_vl" msprop:Generator_ColumnVarNameInTable="columnname_vl" msprop:Generator_ColumnPropNameInRow="name_vl" msprop:Generator_ColumnPropNameInTable="name_vlColumn" msprop:Generator_UserColumnName="name_vl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_ps" msprop:Generator_ColumnVarNameInTable="columnname_ps" msprop:Generator_ColumnPropNameInRow="name_ps" msprop:Generator_ColumnPropNameInTable="name_psColumn" msprop:Generator_UserColumnName="name_ps" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_zavis" msprop:Generator_ColumnVarNameInTable="columnid_zavis" msprop:Generator_ColumnPropNameInRow="id_zavis" msprop:Generator_ColumnPropNameInTable="id_zavisColumn" msprop:Generator_UserColumnName="id_zavis" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="spr_Reg_Billing_for_report" msprop:Generator_TableClassName="spr_Reg_Billing_for_reportDataTable" msprop:Generator_TableVarName="tablespr_Reg_Billing_for_report" msprop:Generator_RowChangedName="spr_Reg_Billing_for_reportRowChanged" msprop:Generator_TablePropName="spr_Reg_Billing_for_report" msprop:Generator_RowDeletingName="spr_Reg_Billing_for_reportRowDeleting" msprop:Generator_RowChangingName="spr_Reg_Billing_for_reportRowChanging" msprop:Generator_RowEvHandlerName="spr_Reg_Billing_for_reportRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_Reg_Billing_for_reportRowDeleted" msprop:Generator_RowClassName="spr_Reg_Billing_for_reportRow" msprop:Generator_UserTableName="spr_Reg_Billing_for_report" msprop:Generator_RowEvArgName="spr_Reg_Billing_for_reportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cspot" msprop:Generator_ColumnVarNameInTable="columncspot" msprop:Generator_ColumnPropNameInRow="cspot" msprop:Generator_ColumnPropNameInTable="cspotColumn" msprop:Generator_UserColumnName="cspot" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cspot2" msprop:Generator_ColumnVarNameInTable="columncspot2" msprop:Generator_ColumnPropNameInRow="cspot2" msprop:Generator_ColumnPropNameInTable="cspot2Column" msprop:Generator_UserColumnName="cspot2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="address1" msprop:Generator_ColumnVarNameInTable="columnaddress1" msprop:Generator_ColumnPropNameInRow="address1" msprop:Generator_ColumnPropNameInTable="address1Column" msprop:Generator_UserColumnName="address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="address2" msprop:Generator_ColumnVarNameInTable="columnaddress2" msprop:Generator_ColumnPropNameInRow="address2" msprop:Generator_ColumnPropNameInTable="address2Column" msprop:Generator_UserColumnName="address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ccounter" msprop:Generator_ColumnVarNameInTable="columnccounter" msprop:Generator_ColumnPropNameInRow="ccounter" msprop:Generator_ColumnPropNameInTable="ccounterColumn" msprop:Generator_UserColumnName="ccounter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cstation" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncstation" msprop:Generator_ColumnPropNameInRow="cstation" msprop:Generator_ColumnPropNameInTable="cstationColumn" msprop:Generator_UserColumnName="cstation" type="xs:string" minOccurs="0" />
+              <xs:element name="nregion" msprop:Generator_ColumnVarNameInTable="columnnregion" msprop:Generator_ColumnPropNameInRow="nregion" msprop:Generator_ColumnPropNameInTable="nregionColumn" msprop:Generator_UserColumnName="nregion" type="xs:int" minOccurs="0" />
+              <xs:element name="customer_type" msprop:Generator_ColumnVarNameInTable="columncustomer_type" msprop:Generator_ColumnPropNameInRow="customer_type" msprop:Generator_ColumnPropNameInTable="customer_typeColumn" msprop:Generator_UserColumnName="customer_type" type="xs:int" minOccurs="0" />
+              <xs:element name="MCB_CT" msprop:Generator_ColumnVarNameInTable="columnMCB_CT" msprop:Generator_ColumnPropNameInRow="MCB_CT" msprop:Generator_ColumnPropNameInTable="MCB_CTColumn" msprop:Generator_UserColumnName="MCB_CT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ccounter_type" msprop:Generator_ColumnVarNameInTable="columnccounter_type" msprop:Generator_ColumnPropNameInRow="ccounter_type" msprop:Generator_ColumnPropNameInTable="ccounter_typeColumn" msprop:Generator_UserColumnName="ccounter_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="transformer_ratio" msprop:Generator_ColumnVarNameInTable="columntransformer_ratio" msprop:Generator_ColumnPropNameInRow="transformer_ratio" msprop:Generator_ColumnPropNameInTable="transformer_ratioColumn" msprop:Generator_UserColumnName="transformer_ratio" type="xs:int" minOccurs="0" />
+              <xs:element name="PM" msprop:Generator_ColumnVarNameInTable="columnPM" msprop:Generator_ColumnPropNameInRow="PM" msprop:Generator_ColumnPropNameInTable="PMColumn" msprop:Generator_UserColumnName="PM" type="xs:double" minOccurs="0" />
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="cconsumer10" msprop:Generator_ColumnVarNameInTable="columncconsumer10" msprop:Generator_ColumnPropNameInRow="cconsumer10" msprop:Generator_ColumnPropNameInTable="cconsumer10Column" msprop:Generator_UserColumnName="cconsumer10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cabonent10" msprop:Generator_ColumnVarNameInTable="columncabonent10" msprop:Generator_ColumnPropNameInRow="cabonent10" msprop:Generator_ColumnPropNameInTable="cabonent10Column" msprop:Generator_UserColumnName="cabonent10" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nfeader" msprop:Generator_ColumnVarNameInTable="columnnfeader" msprop:Generator_ColumnPropNameInRow="nfeader" msprop:Generator_ColumnPropNameInTable="nfeaderColumn" msprop:Generator_UserColumnName="nfeader" type="xs:int" minOccurs="0" />
+              <xs:element name="feader" msprop:Generator_ColumnVarNameInTable="columnfeader" msprop:Generator_ColumnPropNameInRow="feader" msprop:Generator_ColumnPropNameInTable="feaderColumn" msprop:Generator_UserColumnName="feader" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nsubstation" msprop:Generator_ColumnVarNameInTable="columnnsubstation" msprop:Generator_ColumnPropNameInRow="nsubstation" msprop:Generator_ColumnPropNameInTable="nsubstationColumn" msprop:Generator_UserColumnName="nsubstation" type="xs:int" minOccurs="0" />
+              <xs:element name="substation" msprop:Generator_ColumnVarNameInTable="columnsubstation" msprop:Generator_ColumnPropNameInRow="substation" msprop:Generator_ColumnPropNameInTable="substationColumn" msprop:Generator_UserColumnName="substation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_slujba" msprop:Generator_ColumnVarNameInTable="columnname_slujba" msprop:Generator_ColumnPropNameInRow="name_slujba" msprop:Generator_ColumnPropNameInTable="name_slujbaColumn" msprop:Generator_UserColumnName="name_slujba" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nsubstation1" msdata:Caption="nsubstation" msprop:Generator_ColumnVarNameInTable="columnnsubstation1" msprop:Generator_ColumnPropNameInRow="nsubstation1" msprop:Generator_ColumnPropNameInTable="nsubstation1Column" msprop:Generator_UserColumnName="nsubstation1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="spr_res" msprop:Generator_TableClassName="spr_resDataTable" msprop:Generator_TableVarName="tablespr_res" msprop:Generator_RowChangedName="spr_resRowChanged" msprop:Generator_TablePropName="spr_res" msprop:Generator_RowDeletingName="spr_resRowDeleting" msprop:Generator_RowChangingName="spr_resRowChanging" msprop:Generator_RowEvHandlerName="spr_resRowChangeEventHandler" msprop:Generator_RowDeletedName="spr_resRowDeleted" msprop:Generator_RowClassName="spr_resRow" msprop:Generator_UserTableName="spr_res" msprop:Generator_RowEvArgName="spr_resRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="slujbi" msprop:Generator_ColumnVarNameInTable="columnslujbi" msprop:Generator_ColumnPropNameInRow="slujbi" msprop:Generator_ColumnPropNameInTable="slujbiColumn" msprop:Generator_UserColumnName="slujbi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_old" msprop:Generator_ColumnVarNameInTable="columnid_old" msprop:Generator_ColumnPropNameInRow="id_old" msprop:Generator_ColumnPropNameInTable="id_oldColumn" msprop:Generator_UserColumnName="id_old" type="xs:int" minOccurs="0" />
+              <xs:element name="id_zavis" msprop:Generator_ColumnVarNameInTable="columnid_zavis" msprop:Generator_ColumnPropNameInRow="id_zavis" msprop:Generator_ColumnPropNameInTable="id_zavisColumn" msprop:Generator_UserColumnName="id_zavis" type="xs:int" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="vid" msprop:Generator_ColumnVarNameInTable="columnvid" msprop:Generator_ColumnPropNameInRow="vid" msprop:Generator_ColumnPropNameInTable="vidColumn" msprop:Generator_UserColumnName="vid" type="xs:int" minOccurs="0" />
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:int" minOccurs="0" />
+              <xs:element name="id_res" msprop:Generator_ColumnVarNameInTable="columnid_res" msprop:Generator_ColumnPropNameInRow="id_res" msprop:Generator_ColumnPropNameInTable="id_resColumn" msprop:Generator_UserColumnName="id_res" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+C:\Users\saltanatk\Desktop\meters\meters\bin\Debug\meters.exe
+C:\Users\saltanatk\Desktop\meters\meters\bin\Debug\meters.pdb
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\meters.authentifacation.resources
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\meters.Main.resources
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\meters.Properties.Resources.resources
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\MMS.csproj.GenerateResource.Cache
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\meters.exe.licenses
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\meters.exe
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\meters.pdb
+C:\Users\saltanatk\Desktop\meters\meters\obj\Debug\MMS.csprojResolveAssemblyReference.cache
+C:\Users\saltanatk\Desktop\meters\meters\bin\Debug\meters.exe.config

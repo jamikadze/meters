@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>\\server\Программы\MMS\|\\server\Программы\mmstest\|\\192.168.20.37\MMS\|\\server\obmen\MMS\|\\server\Obmen\MMS\Talas\</PublishUrlHistory>
+    <InstallUrlHistory>\\server\Программы\MMS\|\\server\Программы\mmstest\|\\192.168.20.37\MMS\|\\server\Obmen\MMS\|\\server\Obmen\MMS\Talas\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>\\server\Программы\mmstest\|\\server\Программы\MMS\|\\192.168.20.37\MMS\|\\server\obmen\MMS\|\\server\Obmen\MMS\Talas\</UpdateUrlHistory>
+    <BootstrapperUrlHistory>\\server\Программы\MMS\</BootstrapperUrlHistory>
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
